@@ -43,8 +43,12 @@ RouteController.java
 retrieveDepartment():
     [PMD] Loose Coupling
         Use Map interface instead of HashMap implementation. (same in following cases)
+    Incontextualized Return Values
+        Should return status code 200 on success, and 404 when cannot find.
 retrieveCourse():
     [PMD] Loose Coupling
+    Incontextualized Return Values
+        Should return status code 200 not 403 on success
 isCourseFull():
     [PMD] Loose Coupling
 getMajorCtFromDept():
@@ -57,6 +61,8 @@ findCourseInstructor():
     [PMD] Loose Coupling
 findCourseTime():
     [PMD] Loose Coupling
+    Incontextualized Return Values, Obvious Typos
+        Should include actual course time, not a dummy string of "some time".
 addMajorToDept():
     [PMD] Loose Coupling
 removeMajorFromDept():

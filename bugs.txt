@@ -77,3 +77,22 @@ changeCourseTeacher():
     [PMD] Loose Coupling
 changeCourseLocation():
     [PMD] Loose Coupling
+
+
+MyFileDatabase.java
+
+.departmentMapping:
+    [PMD] Loose Coupling
+setMapping():
+    [PMD] Loose Coupling
+deSerializeObjectFromFile():
+    [PMD] Loose Coupling
+getDepartmentMapping():
+    [PMD] Loose Coupling
+
+
+IndividualProjectApplication.java
+
+resetDataFile():
+    [PMD] Loose Coupling
+        Changing declaration types to achieve Polymorphism while maintaining functionality.

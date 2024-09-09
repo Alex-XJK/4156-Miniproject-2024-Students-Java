@@ -35,3 +35,39 @@ dropPersonFromMajor():
         Although this style is strictly forbidden in kernel development...
 toString():
     [PMD] Missing Override
+    Obvious Typos
+
+
+RouteController.java
+
+retrieveDepartment():
+    [PMD] Loose Coupling
+        Use Map interface instead of HashMap implementation. (same in following cases)
+retrieveCourse():
+    [PMD] Loose Coupling
+isCourseFull():
+    [PMD] Loose Coupling
+getMajorCtFromDept():
+    [PMD] Loose Coupling
+identifyDeptChair():
+    [PMD] Loose Coupling
+findCourseLocation():
+    [PMD] Loose Coupling
+findCourseInstructor():
+    [PMD] Loose Coupling
+findCourseTime():
+    [PMD] Loose Coupling
+addMajorToDept():
+    [PMD] Loose Coupling
+removeMajorFromDept():
+    [PMD] Loose Coupling
+dropStudent():
+    [PMD] Loose Coupling
+setEnrollmentCount():
+    [PMD] Loose Coupling
+changeCourseTime():
+    [PMD] Loose Coupling
+changeCourseTeacher():
+    [PMD] Loose Coupling
+changeCourseLocation():
+    [PMD] Loose Coupling

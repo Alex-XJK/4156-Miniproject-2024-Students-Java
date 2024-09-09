@@ -87,6 +87,8 @@ setMapping():
     [PMD] Loose Coupling
 deSerializeObjectFromFile():
     [PMD] Loose Coupling
+    [PMD] Return Empty Collection Rather Than Null
+        Return an empty HashMap<> if deserialization fails
 getDepartmentMapping():
     [PMD] Loose Coupling
 

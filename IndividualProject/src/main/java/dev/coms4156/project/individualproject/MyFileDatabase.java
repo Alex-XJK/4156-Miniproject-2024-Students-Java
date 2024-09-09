@@ -41,10 +41,11 @@ public class MyFileDatabase {
    * @return the deserialized department mapping
    */
   public Map<String, Department> deSerializeObjectFromFile() {
-    try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))) {
+    try (ObjectInputStream in =
+             new ObjectInputStream(new FileInputStream(filePath))) {
       Object obj = in.readObject();
       if (obj instanceof Map) {
-        return (Map<String, Department>) obj;
+        return (Map<String, Department>)obj;
       } else {
         throw new IllegalArgumentException("Invalid object type in file.");
       }
@@ -55,11 +56,12 @@ public class MyFileDatabase {
   }
 
   /**
-   * Saves the contents of the internal data structure to the file. Contents of the file are
-   * overwritten with this operation.
+   * Saves the contents of the internal data structure to the file. Contents of
+   * the file are overwritten with this operation.
    */
   public void saveContentsToFile() {
-    try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath))) {
+    try (ObjectOutputStream out =
+             new ObjectOutputStream(new FileOutputStream(filePath))) {
       out.writeObject(departmentMapping);
       System.out.println("Object serialized successfully.");
     } catch (IOException e) {
@@ -87,7 +89,10 @@ public class MyFileDatabase {
     for (Map.Entry<String, Department> entry : departmentMapping.entrySet()) {
       String key = entry.getKey();
       Department value = entry.getValue();
-      result.append("For the ").append(key).append(" department: \n").append(value.toString());
+      result.append("For the ")
+          .append(key)
+          .append(" department: \n")
+          .append(value.toString());
     }
     return result.toString();
   }

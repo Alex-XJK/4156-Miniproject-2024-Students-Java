@@ -15,3 +15,23 @@ isCourseFull():
         Javadoc states whether the course has REACHED its capacity, not EXCEEDED as indicated by the '>' sign.
 toString():
     [PMD] Missing Override
+
+
+Department.java
+
+.courses:
+    [PMD] Loose Coupling
+        Use Map interface instead of HashMap implementation.
+    [PMD] Unnecessary Import
+getNumberOfMajors():
+    Obvious Typos
+getDepartmentChair():
+    Obvious Typos
+    [PMD] Unused Private Field
+dropPersonFromMajor():
+    Boundary Check
+        Check current major number is greater than 0 then perform drop.
+    [PMD] Control Statement Braces
+        Although this style is strictly forbidden in kernel development...
+toString():
+    [PMD] Missing Override

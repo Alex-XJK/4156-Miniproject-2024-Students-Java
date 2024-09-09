@@ -1,0 +1,17 @@
+Course.java
+
+enrollStudent():
+    Service Logic, Boundary Check
+        Need to check space available first, and return false if it is full.
+dropStudent():
+    Service Logic, Boundary Check
+        Need to check enrollment count first, if no body enrolled, we cannot drop.
+getCourseLocation():
+    Incontextualized Return Values
+getInstructorName():
+    Incontextualized Return Values
+isCourseFull():
+    Service Logic, Not Stringent, Incontextualized Return Values
+        Javadoc states whether the course has REACHED its capacity, not EXCEEDED as indicated by the '>' sign.
+toString():
+    [PMD] Missing Override

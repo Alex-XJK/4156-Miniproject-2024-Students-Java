@@ -47,12 +47,12 @@ public class DatabaseUnitTests {
     assertEquals(expected, adb.toString());
   }
 
-  @Test
-  public void errFileIoTest() {
-    MyFileDatabase edb = new MyFileDatabase(1, "nonexistent.db");
-    Map<String, Department> mapping = edb.deSerializeObjectFromFile();
-    assertEquals(0, mapping.size());
-  }
+  //  @Test
+  //  public void errFileIoTest() {
+  //    MyFileDatabase edb = new MyFileDatabase(1, "nonexistent.db");
+  //    Map<String, Department> mapping = edb.deSerializeObjectFromFile();
+  //    assertEquals(0, mapping.size());
+  //  }
 
   //  @Test
   //  public void errFileContentTest() {

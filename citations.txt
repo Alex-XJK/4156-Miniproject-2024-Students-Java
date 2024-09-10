@@ -1,0 +1,4 @@
+I asked Ed #58 where Shivansh helped me solve the UnnecessaryAnnotationValueElement issue,
+and Ed #49 where Griffin clarified the test data requirements.
+
+The provided links on coursework assignment page also helps a lot.

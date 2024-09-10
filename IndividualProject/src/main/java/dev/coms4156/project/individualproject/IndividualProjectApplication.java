@@ -65,20 +65,22 @@ public class IndividualProjectApplication implements CommandLineRunner {
     String[] times = {"11:40-12:55", "4:10-5:25", "10:10-11:25", "2:40-3:55"};
     String[] locations = {"417 IAB", "309 HAV", "301 URIS"};
 
-    //data for coms dept
+    // data for coms dept
     Course coms1004 = new Course("Adam Cannon", locations[0], times[0], 400);
     coms1004.setEnrolledStudentCount(249);
     Course coms3134 = new Course("Brian Borowski", locations[2], times[1], 250);
     coms3134.setEnrolledStudentCount(242);
     Course coms3157 = new Course("Jae Lee", locations[0], times[1], 400);
     coms3157.setEnrolledStudentCount(311);
-    Course coms3203 = new Course("Ansaf Salleb-Aouissi", locations[2], times[2], 250);
+    Course coms3203 =
+        new Course("Ansaf Salleb-Aouissi", locations[2], times[2], 250);
     coms3203.setEnrolledStudentCount(215);
     Course coms3261 = new Course("Josh Alman", locations[0], times[3], 150);
     coms3261.setEnrolledStudentCount(140);
     Course coms3251 = new Course("Tony Dear", "402 CHANDLER", "1:10-3:40", 125);
     coms3251.setEnrolledStudentCount(99);
-    Course coms3827 = new Course("Daniel Rubenstein", "207 Math", times[2], 300);
+    Course coms3827 =
+        new Course("Daniel Rubenstein", "207 Math", times[2], 300);
     coms3827.setEnrolledStudentCount(283);
     Course coms4156 = new Course("Gail Kaiser", "501 NWC", times[2], 120);
     coms4156.setEnrolledStudentCount(109);
@@ -95,7 +97,7 @@ public class IndividualProjectApplication implements CommandLineRunner {
     Map<String, Department> mapping = new HashMap<>();
     mapping.put("COMS", compSci);
 
-    //data for econ dept
+    // data for econ dept
     Course econ1105 = new Course("Waseem Noor", locations[1], times[3], 210);
     econ1105.setEnrolledStudentCount(187);
     Course econ2257 = new Course("Tamrat Gashaw", "428 PUP", times[2], 125);
@@ -126,10 +128,11 @@ public class IndividualProjectApplication implements CommandLineRunner {
     Department econ = new Department("ECON", courses, "Michael Woodford", 2345);
     mapping.put("ECON", econ);
 
-    //data for ieor dept
+    // data for ieor dept
     Course ieor2500 = new Course("Uday Menon", "627 MUDD", times[0], 50);
     ieor2500.setEnrolledStudentCount(52);
-    Course ieor3404 = new Course("Christopher J Dolan", "303 MUDD", times[2], 73);
+    Course ieor3404 =
+        new Course("Christopher J Dolan", "303 MUDD", times[2], 73);
     ieor3404.setEnrolledStudentCount(80);
     Course ieor3658 = new Course("Daniel Lacker", "310 FAY", times[2], 96);
     ieor3658.setEnrolledStudentCount(87);
@@ -139,9 +142,11 @@ public class IndividualProjectApplication implements CommandLineRunner {
     ieor4106.setEnrolledStudentCount(161);
     Course ieor4405 = new Course("Yuri Faenza", "517 HAV", times[0], 80);
     ieor4405.setEnrolledStudentCount(19);
-    Course ieor4511 = new Course("Michael Robbins", "633 MUDD", "9:00-11:30", 150);
+    Course ieor4511 =
+        new Course("Michael Robbins", "633 MUDD", "9:00-11:30", 150);
     ieor4511.setEnrolledStudentCount(50);
-    Course ieor4540 = new Course("Krzysztof M Choromanski", "633 MUDD", "7:10-9:40", 60);
+    Course ieor4540 =
+        new Course("Krzysztof M Choromanski", "633 MUDD", "7:10-9:40", 60);
     ieor4540.setEnrolledStudentCount(33);
 
     courses = new HashMap<>();
@@ -157,14 +162,17 @@ public class IndividualProjectApplication implements CommandLineRunner {
     Department ieor = new Department("IEOR", courses, "Jay Sethuraman", 67);
     mapping.put("IEOR", ieor);
 
-    //data for chem dept
-    Course chem1403 = new Course("Ruben M Savizky", locations[1], "6:10-7:25", 120);
+    // data for chem dept
+    Course chem1403 =
+        new Course("Ruben M Savizky", locations[1], "6:10-7:25", 120);
     chem1403.setEnrolledStudentCount(100);
-    Course chem1500 = new Course("Joseph C Ulichny", "302 HAV", "6:10-9:50", 46);
+    Course chem1500 =
+        new Course("Joseph C Ulichny", "302 HAV", "6:10-9:50", 46);
     chem1500.setEnrolledStudentCount(50);
     Course chem2045 = new Course("Luis M Campos", "209 HAV", "1:10-2:25", 50);
     chem2045.setEnrolledStudentCount(29);
-    Course chem2444 = new Course("Christopher Eckdahl", locations[1], times[0], 150);
+    Course chem2444 =
+        new Course("Christopher Eckdahl", locations[1], times[0], 150);
     chem2444.setEnrolledStudentCount(150);
     Course chem2494 = new Course("Talha Siddiqui", "202 HAV", "1:10-5:00", 24);
     chem2494.setEnrolledStudentCount(18);
@@ -188,7 +196,7 @@ public class IndividualProjectApplication implements CommandLineRunner {
     Department chem = new Department("CHEM", courses, "Laura J. Kaufman", 250);
     mapping.put("CHEM", chem);
 
-    //data for phys dept
+    // data for phys dept
     Course phys1001 = new Course("Szabolcs Marka", "301 PUP", times[3], 150);
     phys1001.setEnrolledStudentCount(131);
     Course phys1201 = new Course("Eric Raymer", "428 PUP", times[3], 145);
@@ -219,22 +227,28 @@ public class IndividualProjectApplication implements CommandLineRunner {
     Department phys = new Department("PHYS", courses, "Dmitri N. Basov", 43);
     mapping.put("PHYS", phys);
 
-    //data for elen dept
-    Course elen1201 = new Course("David G Vallancourt", "301 PUP", times[1], 120);
+    // data for elen dept
+    Course elen1201 =
+        new Course("David G Vallancourt", "301 PUP", times[1], 120);
     elen1201.setEnrolledStudentCount(108);
-    Course elen3082 = new Course("Kenneth Shepard", "1205 MUDD", "4:10-6:40", 32);
+    Course elen3082 =
+        new Course("Kenneth Shepard", "1205 MUDD", "4:10-6:40", 32);
     elen3082.setEnrolledStudentCount(30);
-    Course elen3331 = new Course("David G Vallancourt", "203 MATH", times[0], 80);
+    Course elen3331 =
+        new Course("David G Vallancourt", "203 MATH", times[0], 80);
     elen3331.setEnrolledStudentCount(54);
     Course elen3401 = new Course("Keren Bergman", "829 MUDD", times[3], 40);
     elen3401.setEnrolledStudentCount(25);
     Course elen3701 = new Course("Irving Kalet", "333 URIS", times[3], 50);
     elen3701.setEnrolledStudentCount(24);
-    Course elen4510 = new Course("Mohamed Kamaludeen", "903 SSW", "7:00-9:30", 30);
+    Course elen4510 =
+        new Course("Mohamed Kamaludeen", "903 SSW", "7:00-9:30", 30);
     elen4510.setEnrolledStudentCount(22);
-    Course elen4702 = new Course("Alexei Ashikhmin", "332 URIS", "7:00-9:30", 50);
+    Course elen4702 =
+        new Course("Alexei Ashikhmin", "332 URIS", "7:00-9:30", 50);
     elen4702.setEnrolledStudentCount(5);
-    Course elen4830 = new Course("Christine P Hendon", "633 MUDD", "10:10-12:40", 60);
+    Course elen4830 =
+        new Course("Christine P Hendon", "633 MUDD", "10:10-12:40", 60);
     elen4830.setEnrolledStudentCount(22);
 
     courses = new HashMap<>();
@@ -250,14 +264,18 @@ public class IndividualProjectApplication implements CommandLineRunner {
     Department elen = new Department("ELEN", courses, "Ioannis Kymissis", 250);
     mapping.put("ELEN", elen);
 
-    //data for psyc dept
-    Course psyc1001 = new Course("Patricia G Lindemann", "501 SCH", "1:10-2:25", 200);
+    // data for psyc dept
+    Course psyc1001 =
+        new Course("Patricia G Lindemann", "501 SCH", "1:10-2:25", 200);
     psyc1001.setEnrolledStudentCount(191);
-    Course psyc1610 = new Course("Christopher Baldassano", "200 SCH", times[2], 45);
+    Course psyc1610 =
+        new Course("Christopher Baldassano", "200 SCH", times[2], 45);
     psyc1610.setEnrolledStudentCount(42);
-    Course psyc2235 = new Course("Katherine T Fox-Glassman", "501 SCH", times[0], 125);
+    Course psyc2235 =
+        new Course("Katherine T Fox-Glassman", "501 SCH", times[0], 125);
     psyc2235.setEnrolledStudentCount(128);
-    Course psyc2620 = new Course("Jeffrey M Cohen", "303 URIS", "1:10-3:40", 60);
+    Course psyc2620 =
+        new Course("Jeffrey M Cohen", "303 URIS", "1:10-3:40", 60);
     psyc2620.setEnrolledStudentCount(55);
     Course psyc3212 = new Course("Mayron Piccolo", "200 SCH", "2:10-4:00", 15);
     psyc3212.setEnrolledStudentCount(15);
@@ -297,8 +315,7 @@ public class IndividualProjectApplication implements CommandLineRunner {
     }
   }
 
-
-  //Database Instance
+  // Database Instance
   public static MyFileDatabase myFileDatabase;
   private static boolean saveData = true;
 }

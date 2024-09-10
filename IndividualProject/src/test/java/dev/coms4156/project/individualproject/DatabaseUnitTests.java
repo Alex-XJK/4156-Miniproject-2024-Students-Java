@@ -72,4 +72,3 @@ public class DatabaseUnitTests {
   public static Department compSci;
   public static Map<String, Department> mapping;
 }
-

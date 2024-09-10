@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
-
 /**
  * The unit test suite on file database-related implementation.
  */
@@ -69,4 +68,3 @@ public class DatabaseUnitTests {
   public static Department compSci;
   public static Map<String, Department> mapping;
 }
-

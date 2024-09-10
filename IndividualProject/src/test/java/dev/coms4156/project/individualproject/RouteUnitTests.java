@@ -1,8 +1,6 @@
 package dev.coms4156.project.individualproject;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -73,6 +71,14 @@ public class RouteUnitTests {
         HttpStatus.NOT_FOUND,
         controller.findCourseInstructor("COMS", 9999).getStatusCode()
     );
+    assertEquals(
+        "The course meets at: 10:10-11:25",
+        controller.findCourseTime("COMS", 4156).getBody()
+    );
+    assertEquals(
+        HttpStatus.NOT_FOUND,
+        controller.findCourseTime("COMS", 9999).getStatusCode()
+    );
   }
 
   @Test
@@ -94,6 +100,75 @@ public class RouteUnitTests {
         controller.identifyDeptChair("ABCD").getStatusCode()
     );
   }
+
+  @Test
+  public void manipulateDepartmentTest() {
+    assertEquals(
+        HttpStatus.OK,
+        controller.addMajorToDept("IEOR").getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.NOT_FOUND,
+        controller.addMajorToDept("ABCD").getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.OK,
+        controller.removeMajorFromDept("IEOR").getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.NOT_FOUND,
+        controller.removeMajorFromDept("ABCD").getStatusCode()
+    );
+  }
+
+  @Test
+  public void manipulateCourseTest() {
+    assertEquals(
+        HttpStatus.OK,
+        controller.setEnrollmentCount("COMS", 3157, 100).getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.NOT_FOUND,
+        controller.setEnrollmentCount("COMS", 9999, 100).getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.OK,
+        controller.changeCourseTime(
+            "COMS", 3157, "0:00-01:00"
+        ).getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.NOT_FOUND,
+        controller.changeCourseTime(
+            "COMS", 9999, "0:00-01:00"
+        ).getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.OK,
+        controller.changeCourseTeacher(
+            "COMS", 3157, "Alex Xu"
+        ).getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.NOT_FOUND,
+        controller.changeCourseTeacher(
+            "COMS", 9999, "Alex Xu"
+        ).getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.OK,
+        controller.changeCourseLocation(
+            "COMS", 3157, "My House"
+        ).getStatusCode()
+    );
+    assertEquals(
+        HttpStatus.NOT_FOUND,
+        controller.changeCourseLocation(
+            "COMS", 9999, "My House"
+        ).getStatusCode()
+    );
+  }
+  
 
   /** The route controller instance used for testing. */
   public static RouteController controller;

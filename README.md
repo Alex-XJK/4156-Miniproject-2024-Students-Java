@@ -23,12 +23,15 @@ I chose the provided static bug finder, **PMD**, in my assignment.
 
 The first PMD report have been appended to the `pmd-init.txt` file.
 The command used to generate this file after you have properly configured PMD is
+
 ```
 pmd check -d ./4156-Miniproject-2024-Students-Java/IndividualProject -R rulesets/java/quickstart.xml -f text | sed -e 's/.\/4156-Miniproject-2024-Students-Java\/IndividualProject\/src\/main\/java\/dev\/coms4156\/project\/individualproject/.../g' > pmd-init.txt
 ```
+
 , and obviously the shell commands that follow are only used to beautify the
 original PMD output. Therefore, the most basic command is as follows
 (make sure you have the correct path to the file).
+
 ```
 pmd check -d ./4156-Miniproject-2024-Students-Java/IndividualProject -R rulesets/java/quickstart.xml -f text
 ```

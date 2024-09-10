@@ -47,6 +47,8 @@ retrieveDepartment():
         Should return status code 200 on success, and 404 when cannot find.
     [PMD] Unnecessary Annotation Value Element
         Remove "value = ", according to Ed #58. (same in following cases)
+    [PMD] Use Locale With Case Conversions
+        Enforce explicit system-dependent conversion by Locale.getDefault()
 retrieveCourse():
     [PMD] Loose Coupling
     Incontextualized Return Values
@@ -114,3 +116,6 @@ IndividualProjectApplication.java
 resetDataFile():
     [PMD] Loose Coupling
         Changing declaration types to achieve Polymorphism while maintaining functionality.
+run():
+    [PMD] Literals First In Comparisons
+        Use "setup".equals(arg) instead of arg.equals("setup")

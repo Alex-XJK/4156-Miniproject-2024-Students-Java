@@ -1,5 +1,6 @@
 package dev.coms4156.project.individualproject;
 
+import java.util.Locale;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
@@ -43,11 +44,13 @@ public class RouteController {
       Map<String, Department> departmentMapping;
       departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
 
-      if (!departmentMapping.containsKey(deptCode.toUpperCase())) {
+      if (!departmentMapping.containsKey(deptCode.toUpperCase(Locale.getDefault()))) {
         return new ResponseEntity<>("Department Not Found", HttpStatus.NOT_FOUND);
       } else {
-        return new ResponseEntity<>(departmentMapping.get(deptCode.toUpperCase()).toString(),
-            HttpStatus.OK);
+        return new ResponseEntity<>(
+            departmentMapping.get(deptCode.toUpperCase(Locale.getDefault())).toString(),
+            HttpStatus.OK
+        );
       }
 
     } catch (Exception e) {

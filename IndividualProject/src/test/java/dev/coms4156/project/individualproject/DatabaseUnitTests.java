@@ -9,16 +9,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
-
 /**
  * The unit test suite on file database-related implementation.
  */
 @SpringBootTest
 @ContextConfiguration
 public class DatabaseUnitTests {
+
+  /**
+   * Sets up the database instance for testing.
+   * Use exact provided data in IndividualProjectApplication.
+   */
   @BeforeAll
   public static void setupItemsForTesting() {
-    // Use provided department information in IndividualProjectApplication
     courses = new HashMap<>();
     compSci = new Department("COMS", courses, "Luca Carloni", 2700);
     mapping = new HashMap<>();

@@ -2,7 +2,6 @@ package dev.coms4156.project.individualproject;
 
 import java.util.Locale;
 import java.util.Map;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

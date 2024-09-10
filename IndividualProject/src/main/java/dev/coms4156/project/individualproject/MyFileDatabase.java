@@ -5,8 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This class represents a file-based database containing department mappings.

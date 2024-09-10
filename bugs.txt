@@ -42,41 +42,57 @@ RouteController.java
 
 retrieveDepartment():
     [PMD] Loose Coupling
-        Use Map interface instead of HashMap implementation. (same in following cases)
+        Use Map interface instead of HashMap. (same in following cases)
     Incontextualized Return Values
         Should return status code 200 on success, and 404 when cannot find.
+    [PMD] Unnecessary Annotation Value Element
+        Remove "value = ", according to Ed #58. (same in following cases)
 retrieveCourse():
     [PMD] Loose Coupling
     Incontextualized Return Values
         Should return status code 200 not 403 on success
+    [PMD] Unnecessary Annotation Value Element
 isCourseFull():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 getMajorCtFromDept():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 identifyDeptChair():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 findCourseLocation():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 findCourseInstructor():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 findCourseTime():
     [PMD] Loose Coupling
     Incontextualized Return Values, Obvious Typos
         Should include actual course time, not a dummy string of "some time".
+    [PMD] Unnecessary Annotation Value Element
 addMajorToDept():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 removeMajorFromDept():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 dropStudent():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 setEnrollmentCount():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 changeCourseTime():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 changeCourseTeacher():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 changeCourseLocation():
     [PMD] Loose Coupling
+    [PMD] Unnecessary Annotation Value Element
 
 
 MyFileDatabase.java
@@ -87,6 +103,8 @@ setMapping():
     [PMD] Loose Coupling
 deSerializeObjectFromFile():
     [PMD] Loose Coupling
+    [PMD] Return Empty Collection Rather Than Null
+        Return an empty HashMap<> if deserialization fails
 getDepartmentMapping():
     [PMD] Loose Coupling
 

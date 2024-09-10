@@ -3,7 +3,6 @@ package dev.coms4156.project.individualproject;
 import jakarta.annotation.PreDestroy;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -38,7 +37,7 @@ public class IndividualProjectApplication implements CommandLineRunner {
    */
   public void run(String[] args) {
     for (String arg : args) {
-      if (arg.equals("setup")) {
+      if ("setup".equals(arg)) {
         myFileDatabase = new MyFileDatabase(1, "./data.txt");
         resetDataFile();
         System.out.println("System Setup");

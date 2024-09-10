@@ -102,6 +102,22 @@ public class RouteUnitTests {
   }
 
   @Test
+  public void infoEdgeCaseTest() {
+    assertEquals(
+        "501 NWC is where the course is located.",
+        controller.findCourseLocation("COMS", 4156).getBody()
+    );
+    assertEquals(
+        "501 NWC is where the course is located.",
+        controller.findCourseLocation("coms", 4156).getBody()
+    );
+    assertEquals(
+        "501 NWC is where the course is located.",
+        controller.findCourseLocation("cOmS", 4156).getBody()
+    );
+  }
+
+  @Test
   public void manipulateDepartmentTest() {
     assertEquals(
         HttpStatus.OK,

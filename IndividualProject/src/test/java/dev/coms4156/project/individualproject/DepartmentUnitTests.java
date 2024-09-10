@@ -3,13 +3,12 @@ package dev.coms4156.project.individualproject;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * The unit test suite on department-related implementation.
@@ -18,9 +17,12 @@ import java.util.Map;
 @ContextConfiguration
 public class DepartmentUnitTests {
 
+  /**
+   * Sets up the department instance for testing.
+   * Use provided department information in IndividualProjectApplication.
+   */
   @BeforeAll
   public static void setupDepartmentForTesting() {
-    // Use provided department information in IndividualProjectApplication
     Map<String, Course> courses = new HashMap<>();
     compSci = new Department("COMS", courses, "Luca Carloni", 2700);
     dummy = new Department("DUMMY", courses, "Dummy Chair", 0);
@@ -64,8 +66,8 @@ public class DepartmentUnitTests {
 
   @Test
   public void toStringTest() {
-    String expected = "COMS 4156: \nInstructor: Gail Kaiser; Location: 501 NWC; Time: 10:10-11:25\n" +
-        "COMS 3157: \nInstructor: Jae Lee; Location: 417 IAB; Time: 4:10-5:25\n";
+    String expected = "COMS 4156: \nInstructor: Gail Kaiser; Location: 501 NWC; Time: 10:10-11:25\n"
+        + "COMS 3157: \nInstructor: Jae Lee; Location: 417 IAB; Time: 4:10-5:25\n";
     assertEquals(expected, compSci.toString());
   }
 
